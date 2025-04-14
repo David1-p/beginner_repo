@@ -1,9 +1,10 @@
+package calculate;
+
 import java.util.Scanner;
 
 public class CalculateTryCatchFinally {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
             try {
                 System.out.print("첫번째 숫자 입력: ");
                 int num1 = sc.nextInt();
