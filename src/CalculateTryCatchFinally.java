@@ -17,31 +17,30 @@ public class CalculateTryCatchFinally {
                 int result = 0;
 
                 switch (op) {
-                    case '+' :
+                    case '+':
                         result = num1 + num2;
                         break;
-                    case '-' :
+                    case '-':
                         result = num1 - num2;
                         break;
-                    case '*' :
+                    case '*':
                         result = num1 * num2;
                         break;
-                    case '0' :
-                        if (num2 == 0) {
-                            System.out.println(" 0으로 나눌수 없습니다.");
-
-                        } else {
-                            result = num1 / num2;
-                        }
+                    case '/':
+                        result = num1 / num2;
                         break;
                     default:
                         System.out.println("계산 불가!");
-                        valid = false;
+                        return;
                 }
-        if (valid) {
-            System.out.println("결과: " + result);
-        }
-        sc.close();
-
+                System.out.println("결과: " + result);
+            } catch (ArithmeticException e) {
+                System.out.println("예외 발생! 0으로 나눌 수 없습니다.");
+            } catch (Exception e) {
+                System.out.println("예외 발생! 입력 잘못했어!");
+            } finally {
+                sc.close();
+                System.out.println("종료!");
+            }
     }
 }
