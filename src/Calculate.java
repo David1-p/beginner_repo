@@ -26,7 +26,7 @@ class Calculate {
             case '*' :
                 result = num1 * num2;
                 break;
-            case '0' :
+            case '/' :
                 if (num2 == 0) {
                     System.out.println(" 0으로 나눌수 없습니다.");
                     valid = false;
